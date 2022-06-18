@@ -10,11 +10,11 @@ logger = logging.getLogger(__name__)
 soso = "◍ "
 
 @loader.tds
-class HelpsMod(loader.Module):
+class HelpMod(loader.Module):
     """Help module, made specifically for Hikka with <3"""
 
     strings = {
-        "name": "Helps",
+        "name": "Help",
         "bad_module": soso + "<b><b>Module</b> <code>{}</code> <b>not found</b>",
         "single_mod_header": soso + "<b>{}</b>:",
         "single_cmd": "\n" + soso + "<code>{}{}</code> {}",
@@ -78,7 +78,7 @@ class HelpsMod(loader.Module):
             ),
         )
 
-    async def helphidescmd(self, message: Message):
+    async def helphidecmd(self, message: Message):
         """<module or modules> - Hide module(-s) from help
         *Split modules by spaces"""
         modules = utils.get_args(message)
@@ -197,7 +197,7 @@ class HelpsMod(loader.Module):
         )
 
     @loader.unrestricted
-    async def helpscmd(self, message: Message):
+    async def helpcmd(self, message: Message):
         """[module] [-f] - Show help"""
         args = utils.get_args_raw(message)
         force = False
