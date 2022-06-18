@@ -1,25 +1,11 @@
-# █ █ ▀ █▄▀ ▄▀█ █▀█ ▀    ▄▀█ ▀█▀ ▄▀█ █▀▄▀█ ▄▀█
-# █▀█ █ █ █ █▀█ █▀▄ █ ▄  █▀█  █  █▀█ █ ▀ █ █▀█
-#
-#              © Copyright 2022
-#
-#          https://t.me/hikariatama
-#
-# 🔒 Licensed under the GNU GPLv3
-# 🌐 https://www.gnu.org/licenses/agpl-3.0.html
-
-# scope: inline
-
 import inspect
 import logging
 import os
 import time
 from io import BytesIO
 from typing import Union
-
 from telethon.tl.functions.channels import EditAdminRequest, InviteToChannelRequest
 from telethon.tl.types import ChatAdminRights, Message
-
 from .. import loader, main, utils
 from ..inline.types import InlineCall
 
@@ -45,8 +31,8 @@ class TestMod(loader.Module):
         "name": "Tester",
         "set_loglevel": "🚫 <b>Please specify verbosity as an integer or string</b>",
         "no_logs": "ℹ️ <b>You don't have any logs at verbosity {}.</b>",
-        "logs_filename": "hikka-logs.txt",
-        "logs_caption": "🌘 <b>Hikka logs with verbosity </b><code>{}</code>\n\n👩‍🎤 <b>Hikka version: {}.{}.{}</b>{}\n⏱ <b>Uptime: {}</b>\n<b>{}</b>\n\n<b>{}</b>\n\n<b>{} NoNick</b>\n<b>{} Grep</b>\n<b>{} InlineLogs</b>",
+        "logs_filename": "sosoloooooog.html",
+        "logs_caption": "log",
         "suspend_invalid_time": "🚫 <b>Invalid time to suspend</b>",
         "suspended": "🥶 <b>Bot suspended for</b> <code>{}</code> <b>seconds</b>",
         "results_ping": "⏱ <b>Response time:</b> <code>{}</code> <b>ms</b>\n👩‍💼 <b>Uptime: {}</b>",
@@ -68,8 +54,6 @@ class TestMod(loader.Module):
     strings_ru = {
         "set_loglevel": "🚫 <b>Укажи уровень логов числом или строкой</b>",
         "no_logs": "ℹ️ <b>У тебя нет логов уровня {}.</b>",
-        "logs_filename": "hikka-logs.txt",
-        "logs_caption": "🌘 <b>Логи Hikka уровня </b><code>{}</code>\n\n👩‍🎤 <b>Версия Hikka: {}.{}.{}</b>{}\n⏱ <b>Uptime: {}</b>\n<b>{}</b>\n\n<b>{}</b>\n\n<b>{} NoNick</b>\n<b>{} Grep</b>\n<b>{} InlineLogs</b>",
         "database_unlocked": "🚫 База скомпрометирована",
         "database_locked": "✅ База защищена",
         "bad_module": "🚫 <b>Модуль не найден</b>",
@@ -441,10 +425,10 @@ class TestMod(loader.Module):
 
         chat, is_new = await utils.asset_channel(
             self._client,
-            "hikka-logs",
-            "🌘 Your Hikka logs will appear in this chat",
+            "soso-logs",
+            "🌉 Your Soso logs will appear in this chat",
             silent=True,
-            avatar="https://github.com/hikariatama/assets/raw/master/hikka-logs.png",
+            avatar="https://te.legra.ph/file/7fd73ee637e2878eb3045.jpg",
         )
 
         self._logchat = int(f"-100{chat.id}")
