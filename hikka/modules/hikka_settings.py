@@ -1,15 +1,3 @@
-# █ █ ▀ █▄▀ ▄▀█ █▀█ ▀    ▄▀█ ▀█▀ ▄▀█ █▀▄▀█ ▄▀█
-# █▀█ █ █ █ █▀█ █▀▄ █ ▄  █▀█  █  █▀█ █ ▀ █ █▀█
-#
-#              © Copyright 2022
-#
-#          https://t.me/hikariatama
-#
-# 🔒 Licensed under the GNU GPLv3
-# 🌐 https://www.gnu.org/licenses/agpl-3.0.html
-
-# scope: inline
-
 import logging
 import atexit
 import random
@@ -21,7 +9,6 @@ from telethon.tl.functions.messages import (
     UpdateDialogFilterRequest,
 )
 from telethon.utils import get_display_name
-
 from .. import loader, main, utils
 from ..inline.types import InlineCall
 
@@ -43,7 +30,7 @@ class HikkaSettingsMod(loader.Module):
     """Advanced settings for Hikka Userbot"""
 
     strings = {
-        "name": "HikkaSettings",
+        "name": "Settings",
         "watchers": "👀 <b>Watchers:</b>\n\n<b>{}</b>",
         "mod404": "🚫 <b>Watcher {} not found</b>",
         "disabled": "👀 <b>Watcher {} is now <u>disabled</u></b>",
