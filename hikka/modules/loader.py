@@ -152,7 +152,7 @@ class LoaderMod(loader.Module):
         self.config = loader.ModuleConfig(
             loader.ConfigValue(
                 "MODULES_REPO",
-                "https://mods.hikariatama.ru",
+                "https://raw.githubusercontent.com/Netuzb/FTG-Modules/main/",
                 lambda: self.strings("repo_config_doc"),
                 validator=loader.validators.Link(),
             ),
