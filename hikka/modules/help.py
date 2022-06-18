@@ -19,7 +19,7 @@ class HelpMod(loader.Module):
         "single_mod_header": soso + "<b>{}</b>:",
         "single_cmd": "\n" + soso + "<code>{}{}</code> {}",
         "undoc_cmd": soso + "No docs",
-        "all_header": soso + "{} MODS AVAILABLE, \n{} HIDDEN",
+        "all_header": soso + "{} MODS AVAILABLE ◍ {} HIDDEN",
         "mod_tmpl": "\n{} <b>{}</b>",
         "first_cmd_tmpl": ": {}",
         "cmd_tmpl": "_{}",
@@ -36,7 +36,7 @@ class HelpMod(loader.Module):
     strings_ru = {
         "bad_module": soso + "<b><b>Модуль</b> <code>{}</code> <b>не найден</b>",
         "undoc_cmd": soso + "Нет описания",
-        "all_header": soso + "{} МОДУЛЕЙ ДОСТУПНО, \n{} СКРЫТО",
+        "all_header": soso + "{} МОДУЛЕЙ ДОСТУПНО ◍ {} СКРЫТО",
         "soso_temur": soso + "Темур-Эркинов",
         "soso_userbot": soso + "Soso-Юзербот",
         "no_mod": soso + "<b>Укажи модуль(-и), которые нужно скрыть</b>",
