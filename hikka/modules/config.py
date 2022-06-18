@@ -1,23 +1,9 @@
-# █ █ ▀ █▄▀ ▄▀█ █▀█ ▀    ▄▀█ ▀█▀ ▄▀█ █▀▄▀█ ▄▀█
-# █▀█ █ █ █ █▀█ █▀▄ █ ▄  █▀█  █  █▀█ █ ▀ █ █▀█
-#
-#              © Copyright 2022
-#
-#          https://t.me/hikariatama
-#
-# 🔒 Licensed under the GNU GPLv3
-# 🌐 https://www.gnu.org/licenses/agpl-3.0.html
-
-# scope: inline
-
 import ast
 import functools
 import logging
 from math import ceil
 from typing import Optional, Union, Any
-
 from telethon.tl.types import Message
-
 from .. import loader, utils, translations
 from ..inline.types import InlineCall
 
@@ -29,7 +15,7 @@ class HikkaConfigMod(loader.Module):
     """Interactive configurator for Hikka Userbot"""
 
     strings = {
-        "name": "HikkaConfig",
+        "name": "Config",
         "choose_core": "🎚 <b>Choose a category of modules to configure</b>",
         "configure": "🎚 <b>Choose a module to configure</b>",
         "configuring_mod": "🎚 <b>Choose config option for mod</b> <code>{}</code>\n\n<b>Current options:</b>\n\n{}",
