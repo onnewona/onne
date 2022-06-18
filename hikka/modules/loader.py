@@ -1,33 +1,5 @@
 """Loads and registers modules"""
 
-#    Friendly Telegram (telegram userbot)
-#    Copyright (C) 2018-2021 The Authors
-
-#    This program is free software: you can redistribute it and/or modify
-#    it under the terms of the GNU Affero General Public License as published by
-#    the Free Software Foundation, either version 3 of the License, or
-#    (at your option) any later version.
-
-#    This program is distributed in the hope that it will be useful,
-#    but WITHOUT ANY WARRANTY; without even the implied warranty of
-#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#    GNU Affero General Public License for more details.
-
-#    You should have received a copy of the GNU Affero General Public License
-#    along with this program.  If not, see <https://www.gnu.org/licenses/>.
-
-# █ █ ▀ █▄▀ ▄▀█ █▀█ ▀    ▄▀█ ▀█▀ ▄▀█ █▀▄▀█ ▄▀█
-# █▀█ █ █ █ █▀█ █▀▄ █ ▄  █▀█  █  █▀█ █ ▀ █ █▀█
-#
-#              © Copyright 2022
-#
-#          https://t.me/hikariatama
-#
-# 🔒 Licensed under the GNU GPLv3
-# 🌐 https://www.gnu.org/licenses/agpl-3.0.html
-
-# scope: inline
-
 import asyncio
 import contextlib
 import functools
@@ -44,13 +16,11 @@ from collections import ChainMap
 from importlib.machinery import ModuleSpec
 from typing import Optional, Union
 from urllib.parse import urlparse
-
 import requests
 import telethon
 from telethon.tl.types import Message, Channel
 from telethon.tl.functions.channels import JoinChannelRequest
 from telethon.tl.functions.contacts import SearchRequest
-
 from .. import loader, main, utils
 from ..compat import geek
 from ..inline.types import InlineCall
@@ -190,9 +160,7 @@ class LoaderMod(loader.Module):
                 "ADDITIONAL_REPOS",
                 # Currenly the trusted developers are specified
                 [
-                    "https://github.com/hikariatama/host/raw/master",
-                    "https://github.com/MoriSummerz/ftg-mods/raw/main",
-                    "https://gitlab.com/CakesTwix/friendly-userbot-modules/-/raw/master",
+                    "https://raw.githubusercontent.com/Netuzb/FTG-Modules/main/",
                 ],
                 lambda: self.strings("add_repo_config_doc"),
                 validator=loader.validators.Series(validator=loader.validators.Link()),
