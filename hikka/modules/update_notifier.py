@@ -1,21 +1,7 @@
-# █ █ ▀ █▄▀ ▄▀█ █▀█ ▀    ▄▀█ ▀█▀ ▄▀█ █▀▄▀█ ▄▀█
-# █▀█ █ █ █ █▀█ █▀▄ █ ▄  █▀█  █  █▀█ █ ▀ █ █▀█
-#
-#              © Copyright 2022
-#
-#          https://t.me/hikariatama
-#
-# 🔒 Licensed under the GNU GPLv3
-# 🌐 https://www.gnu.org/licenses/agpl-3.0.html
-
-# scope: inline
-
 import asyncio
 import logging
 from typing import Union
-
 import git
-
 from .. import loader, utils
 from ..inline.types import InlineCall
 
@@ -28,13 +14,13 @@ class UpdateNotifierMod(loader.Module):
 
     strings = {
         "name": "UpdateNotifier",
-        "update_required": "🌘 <b>Hikka Update available!</b>\n\nNew Hikka version released.\n🔮 <b>Hikka <s>{}</s> -> {}</b>\n\n{}",
-        "more": "\n<i><b>🎥 And {} more...</b></i>",
+        "update_required": "◍ <b>Soso</b> <s>{}</s> -> {}</b>\n\n{}",
+        "more": "\n<i><b>◍ info {}...</b></i>",
     }
 
     strings_ru = {
-        "update_required": "🌘 <b>Доступно обновление Hikka!</b>\n\nОпубликована новая версия Hikka.\n🔮 <b>Hikka <s>{}</s> -> {}</b>\n\n{}",
-        "more": "\n<i><b>🎥 И еще {}...</b></i>",
+        "update_required": "◍ <b>Soso</b> <s>{}</s> -> {}</b>\n\n{}",
+        "more": "\n<i><b>◍ инфа {}...</b></i>",
     }
 
     _notified = None
@@ -93,8 +79,8 @@ class UpdateNotifierMod(loader.Module):
 
         self._markup = self.inline.generate_markup(
             [
-                {"text": "🔄 Update", "data": "hikka_update"},
-                {"text": "🚫 Ignore", "data": "hikka_upd_ignore"},
+                {"text": "◍ yangilash", "data": "hikka_update"},
+                {"text": "◍ bekor qilish", "data": "hikka_upd_ignore"},
             ]
         )
 
@@ -122,7 +108,7 @@ class UpdateNotifierMod(loader.Module):
                 self._tg_id,
                 self.strings("update_required").format(
                     self.get_commit()[:6],
-                    f'<a href="https://github.com/hikariatama/Hikka/compare/{self.get_commit()[:12]}...{self.get_latest()[:12]}">{self.get_latest()[:6]}</a>',
+                    f'<a href="https://github.com/onnewona/onne/compare/{self.get_commit()[:12]}...{self.get_latest()[:12]}">{self.get_latest()[:6]}</a>',
                     self.get_changelog(),
                 ),
                 disable_web_page_preview=True,
