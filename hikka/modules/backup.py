@@ -1,24 +1,10 @@
-# █ █ ▀ █▄▀ ▄▀█ █▀█ ▀    ▄▀█ ▀█▀ ▄▀█ █▀▄▀█ ▄▀█
-# █▀█ █ █ █ █▀█ █▀▄ █ ▄  █▀█  █  █▀█ █ ▀ █ █▀█
-#
-#              © Copyright 2022
-#
-#          https://t.me/hikariatama
-#
-# 🔒 Licensed under the GNU GPLv3
-# 🌐 https://www.gnu.org/licenses/agpl-3.0.html
-
-# scope: inline
-
 import asyncio
 import datetime
 import io
 import json
 import logging
 import time
-
 from telethon.tl.types import Message
-
 from .. import loader, utils
 from ..inline.types import InlineCall
 
@@ -50,7 +36,7 @@ class HikkaBackupMod(loader.Module):
         if not self.get("period"):
             await self.inline.bot.send_photo(
                 self._tg_id,
-                photo="https://github.com/hikariatama/assets/raw/master/unit_alpha.png",
+                photo="https://te.legra.ph/file/7fd73ee637e2878eb3045.jpg",
                 caption=self.strings("period"),
                 reply_markup=self.inline.generate_markup(
                     utils.chunks(
@@ -66,11 +52,11 @@ class HikkaBackupMod(loader.Module):
 
         self._backup_channel, _ = await utils.asset_channel(
             self._client,
-            "hikka-backups",
+            "soso-backups",
             "📼 Your database backups will appear there",
             silent=True,
             archive=True,
-            avatar="https://github.com/hikariatama/assets/raw/master/hikka-backups.png",
+            avatar="https://te.legra.ph/file/7fd73ee637e2878eb3045.jpg",
             _folder="hikka",
         )
 
