@@ -1,23 +1,9 @@
-# █ █ ▀ █▄▀ ▄▀█ █▀█ ▀    ▄▀█ ▀█▀ ▄▀█ █▀▄▀█ ▄▀█
-# █▀█ █ █ █ █▀█ █▀▄ █ ▄  █▀█  █  █▀█ █ ▀ █ █▀█
-#
-#              © Copyright 2022
-#
-#          https://t.me/hikariatama
-#
-# 🔒 Licensed under the CC BY-NC-ND 4.0
-# 🌐 https://creativecommons.org/licenses/by-nc-nd/4.0
-
-# scope: inline
-
 import logging
 import re
 import string
-
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.tl.functions.contacts import UnblockRequest
 from telethon.tl.types import Message
-
 from .. import loader, utils
 from ..inline.types import InlineCall
 
@@ -29,7 +15,7 @@ class InlineStuffMod(loader.Module):
     """Provides support for inline stuff"""
 
     strings = {
-        "name": "InlineStuff",
+        "name": "InlineChanger",
         "bot_username_invalid": "🚫 <b>Specified bot username is invalid. It must end with </b><code>bot</code><b> and contain at least 4 symbols</b>",
         "bot_username_occupied": "🚫 <b>This username is already occupied</b>",
         "bot_updated": "😌 <b>Config successfully saved. Restart userbot to apply changes</b>",
@@ -69,7 +55,7 @@ class InlineStuffMod(loader.Module):
 
         await message.delete()
 
-        m = await message.respond("🌘 <b>Opening gallery... wait</b>")
+        m = await message.respond("<b>◍ soso gallery...</b>")
 
         await self.inline.gallery(
             message=m,
@@ -110,7 +96,7 @@ class InlineStuffMod(loader.Module):
 
                     return True
 
-    async def ch_hikka_botcmd(self, message: Message):
+    async def change_inlinecmd(self, message: Message):
         """<username> - Change your Hikka inline bot username"""
         args = utils.get_args_raw(message).strip("@")
         if (
