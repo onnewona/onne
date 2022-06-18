@@ -10,24 +10,27 @@ from ..inline.types import InlineCall
 
 logger = logging.getLogger(__name__)
 
+soso = "◍ "
 
 @loader.tds
-class HikkaBackupMod(loader.Module):
+class BackupMod(loader.Module):
     """Automatic database backup"""
 
     strings = {
-        "name": "HikkaBackup",
-        "period": "⌚️ <b>Unit «ALPHA»</b> creates database backups periodically. You can change this behavior later.\n\nPlease, select the periodicity of automatic database backups",
-        "saved": "✅ Backup period saved. You can re-configure it later with .set_backup_period",
-        "never": "✅ I will not make automatic backups. You can re-configure it later with .set_backup_period",
-        "invalid_args": "🚫 <b>Specify correct backup period in hours, or `0` to disable</b>",
+        "name": "Backup",
+        "hecham": soso + "bekor qilish",
+        "period": soso + "<b>Men «Soso»</b> backuperman.",
+        "saved": soso + "Backup period saved. You can re-configure it later with .set_backup_period",
+        "never": soso + "I will not make automatic backups. You can re-configure it later with .set_backup_period",
+        "invalid_args": soso + "<b>Specify correct backup period in hours, or `0` to disable</b>",
     }
 
     strings_ru = {
-        "period": "⌚️ <b>Юнит «ALPHA»</b> создает регулярные резервные копии. Эти настройки можно изменить позже.\n\nПожалуйста, выберите периодичность резервного копирования",
-        "saved": "✅ Периодичность сохранена! Ее можно изменить с помощью .set_backup_period",
-        "never": "✅ Я не буду делать автоматические резервные копии. Можно отменить используя .set_backup_period",
-        "invalid_args": "🚫 <b>Укажи правильную периодичность в часах, или `0` для отключения</b>",
+        "period": soso + "<b>Я «Soso»</b> бэкапер.",
+        "hecham": soso + "отменить",    
+        "saved": soso + "Периодичность сохранена! Ее можно изменить с помощью .set_backup_period",
+        "never": soso + "Я не буду делать автоматические резервные копии. Можно отменить используя .set_backup_period",
+        "invalid_args": soso + "<b>Укажи правильную периодичность в часах, или `0` для отключения</b>",
     }
 
     async def client_ready(self, client, db):
@@ -46,7 +49,7 @@ class HikkaBackupMod(loader.Module):
                         ],
                         3,
                     )
-                    + [[{"text": "🚫 Never", "data": "backup_period/never"}]]
+                    + [[{"text": f"{self.strings('soso_hecham')}", "data": "backup_period/never"}]]
                 ),
             )
 
