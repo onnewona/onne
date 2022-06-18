@@ -34,15 +34,11 @@ fi
 clear
 clear
 
-printf "\n\e[1;35;47m                   \e[0m"
-printf "\n\e[1;35;47m █ █ █ █▄▀ █▄▀ ▄▀█ \e[0m"
-printf "\n\e[1;35;47m █▀█ █ █ █ █ █ █▀█ \e[0m"
-printf "\n\e[1;35;47m                   \e[0m"
-printf "\n\n\e[3;34;40m Installing...\e[0m\n\n"
+printf "\n\n\e[3;34;40m soso...\e[0m\n\n"
 
 ##############################################################################
 
-printf "\r\033[0;34mPreparing for installation...\e[0m"
+printf "\r\033[0;34m ornatilmoqda...\e[0m"
 
 touch hikka-install.log
 if [ ! x"$SUDO_USER" = x"" ]; then
@@ -68,8 +64,8 @@ if [ ! x"" = x"$DYNO" ] && ! command -v python >/dev/null; then
 	export PATH="/app/.heroku/python/bin:$PATH" # Prefer the bootstrapped python, incl. pip, over the system one.
 fi
 
-if [ -d "Hikka/hikka" ]; then
-	cd Hikka || {
+if [ -d "onnewona/hikka" ]; then
+	cd onne || {
 		printf "\rError: Install git package and re-run installer"
 		exit 6
 	}
@@ -148,13 +144,13 @@ printf "\n\r\033[0;34mCloning repo...\e[0m"
 ##############################################################################
 
 # shellcheck disable=SC2086
-${SUDO_CMD}rm -rf Hikka
+${SUDO_CMD}rm -rf onne
 # shellcheck disable=SC2086
-runout ${SUDO_CMD}git clone https://github.com/hikariatama/Hikka/ || {
+runout ${SUDO_CMD}git clone https://github.com/onnewona/onne/ || {
 	errorout "Clone failed."
 	exit 3
 }
-cd Hikka || {
+cd onne || {
 	printf "\r\033[0;33mRun: \033[1;33mpkg install git\033[0;33m and restart installer"
 	exit 7
 }
