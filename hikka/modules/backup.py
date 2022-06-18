@@ -18,7 +18,7 @@ class BackupMod(loader.Module):
 
     strings = {
         "name": "Backup",
-        "hecham": soso + "bekor qilish",
+        "soso_hecham": soso + "bekor qilish",
         "period": soso + "<b>Men «Soso»</b> backuperman.",
         "saved": soso + "Backup period saved. You can re-configure it later with .set_backup_period",
         "never": soso + "I will not make automatic backups. You can re-configure it later with .set_backup_period",
@@ -27,7 +27,7 @@ class BackupMod(loader.Module):
 
     strings_ru = {
         "period": soso + "<b>Я «Soso»</b> бэкапер.",
-        "hecham": soso + "отменить",    
+        "soso_hecham": soso + "отменить",    
         "saved": soso + "Периодичность сохранена! Ее можно изменить с помощью .set_backup_period",
         "never": soso + "Я не буду делать автоматические резервные копии. Можно отменить используя .set_backup_period",
         "invalid_args": soso + "<b>Укажи правильную периодичность в часах, или `0` для отключения</b>",
@@ -44,7 +44,7 @@ class BackupMod(loader.Module):
                 reply_markup=self.inline.generate_markup(
                     utils.chunks(
                         [
-                            {"text": f"🕰 {i} h", "data": f"backup_period/{i}"}
+                            {"text": f"◍ {i} ◍", "data": f"backup_period/{i}"}
                             for i in {1, 2, 4, 6, 8, 12, 24, 48, 168}
                         ],
                         3,
