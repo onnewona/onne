@@ -1,31 +1,5 @@
 """Utilities"""
 
-#    Friendly Telegram (telegram userbot)
-#    Copyright (C) 2018-2021 The Authors
-
-#    This program is free software: you can redistribute it and/or modify
-#    it under the terms of the GNU Affero General Public License as published by
-#    the Free Software Foundation, either version 3 of the License, or
-#    (at your option) any later version.
-
-#    This program is distributed in the hope that it will be useful,
-#    but WITHOUT ANY WARRANTY; without even the implied warranty of
-#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#    GNU Affero General Public License for more details.
-
-#    You should have received a copy of the GNU Affero General Public License
-#    along with this program.  If not, see <https://www.gnu.org/licenses/>.
-
-# █ █ ▀ █▄▀ ▄▀█ █▀█ ▀    ▄▀█ ▀█▀ ▄▀█ █▀▄▀█ ▄▀█
-# █▀█ █ █ █ █▀█ █▀▄ █ ▄  █▀█  █  █▀█ █ ▀ █ █▀█
-#
-#              © Copyright 2022
-#
-#          https://t.me/hikariatama
-#
-# 🔒 Licensed under the GNU GPLv3
-# 🌐 https://www.gnu.org/licenses/agpl-3.0.html
-
 import asyncio
 import contextlib
 import functools
@@ -355,12 +329,12 @@ async def answer(
                 return list_
             except Exception:
                 file = io.BytesIO(text.encode("utf-8"))
-                file.name = "command_result.txt"
+                file.name = "soso-fuuuuuuuul.html"
 
                 result = await message.client.send_file(
                     message.peer_id,
                     file,
-                    caption="<b>📤 Command output seems to be too long, so it's sent in file.</b>",
+                    caption="<b>◍ soso-fuuuuuuuuul</b>",
                 )
 
                 if message.out:
@@ -636,21 +610,21 @@ def get_named_platform() -> str:
     is_heroku = "DYNO" in os.environ
 
     if is_heroku:
-        return "♓️ Heroku"
+        return "◍ Heroku"
 
     if is_docker:
-        return "🐳 Docker"
+        return "◍ Docker"
 
     if is_termux:
-        return "🕶 Termux"
+        return "◍ Terminal"
 
     if is_okteto:
-        return "☁️ Okteto"
+        return "◍ Okteto"
 
     if is_lavhost:
         return f"✌️ lavHost {os.environ['LAVHOST']}"
 
-    return "📻 VDS"
+    return "◍ VDS"
 
 
 def uptime() -> int:
@@ -668,64 +642,7 @@ def ascii_face() -> str:
     return escape_html(
         random.choice(
             [
-                "ヽ(๑◠ܫ◠๑)ﾉ",
-                "(◕ᴥ◕ʋ)",
-                "ᕙ(`▽´)ᕗ",
-                "(✿◠‿◠)",
-                "(▰˘◡˘▰)",
-                "(˵ ͡° ͜ʖ ͡°˵)",
-                "ʕっ•ᴥ•ʔっ",
-                "( ͡° ᴥ ͡°)",
-                "(๑•́ ヮ •̀๑)",
-                "٩(^‿^)۶",
-                "(っˆڡˆς)",
-                "ψ(｀∇´)ψ",
-                "⊙ω⊙",
-                "٩(^ᴗ^)۶",
-                "(´・ω・)っ由",
-                "( ͡~ ͜ʖ ͡°)",
-                "✧♡(◕‿◕✿)",
-                "โ๏௰๏ใ ื",
-                "∩｡• ᵕ •｡∩ ♡",
-                "(♡´౪`♡)",
-                "(◍＞◡＜◍)⋈。✧♡",
-                "╰(✿´⌣`✿)╯♡",
-                "ʕ•ᴥ•ʔ",
-                "ᶘ ◕ᴥ◕ᶅ",
-                "▼・ᴥ・▼",
-                "ฅ^•ﻌ•^ฅ",
-                "(΄◞ิ౪◟ิ‵)",
-                "٩(^ᴗ^)۶",
-                "ᕴｰᴥｰᕵ",
-                "ʕ￫ᴥ￩ʔ",
-                "ʕᵕᴥᵕʔ",
-                "ʕᵒᴥᵒʔ",
-                "ᵔᴥᵔ",
-                "(✿╹◡╹)",
-                "(๑￫ܫ￩)",
-                "ʕ·ᴥ·　ʔ",
-                "(ﾉ≧ڡ≦)",
-                "(≖ᴗ≖✿)",
-                "（〜^∇^ )〜",
-                "( ﾉ･ｪ･ )ﾉ",
-                "~( ˘▾˘~)",
-                "(〜^∇^)〜",
-                "ヽ(^ᴗ^ヽ)",
-                "(´･ω･`)",
-                "₍ᐢ•ﻌ•ᐢ₎*･ﾟ｡",
-                "(。・・)_且",
-                "(=｀ω´=)",
-                "(*•‿•*)",
-                "(*ﾟ∀ﾟ*)",
-                "(☉⋆‿⋆☉)",
-                "ɷ◡ɷ",
-                "ʘ‿ʘ",
-                "(。-ω-)ﾉ",
-                "( ･ω･)ﾉ",
-                "(=ﾟωﾟ)ﾉ",
-                "(・ε・`*) …",
-                "ʕっ•ᴥ•ʔっ",
-                "(*˘︶˘*)",
+                "(◕ᴗ◕✿)",         
             ]
         )
     )
