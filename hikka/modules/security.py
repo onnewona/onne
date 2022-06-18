@@ -1,21 +1,7 @@
-# █ █ ▀ █▄▀ ▄▀█ █▀█ ▀    ▄▀█ ▀█▀ ▄▀█ █▀▄▀█ ▄▀█
-# █▀█ █ █ █ █▀█ █▀▄ █ ▄  █▀█  █  █▀█ █ ▀ █ █▀█
-#
-#              © Copyright 2022
-#
-#          https://t.me/hikariatama
-#
-# 🔒 Licensed under the GNU GPLv3
-# 🌐 https://www.gnu.org/licenses/agpl-3.0.html
-
-# scope: inline
-
 import logging
 from typing import List, Union
-
 from telethon.tl.types import Message, PeerUser, User
 from telethon.utils import get_display_name
-
 from .. import loader, security, utils, main
 from ..inline.types import InlineCall
 from ..security import (
@@ -43,7 +29,7 @@ class HikkaSecurityMod(loader.Module):
     """Control security settings"""
 
     strings = {
-        "name": "HikkaSecurity",
+        "name": "Security",
         "no_command": "🚫 <b>Command </b><code>{}</code><b> not found!</b>",
         "permissions": "🔐 <b>Here you can configure permissions for </b><code>{}{}</code>",
         "close_menu": "🙈 Close this menu",
